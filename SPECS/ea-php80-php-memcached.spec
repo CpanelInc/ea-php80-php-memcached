@@ -1,5 +1,3 @@
-%global debug_package %{nil}
-
 %global scl_version ea-php80
 %global ext_prefix opt/cpanel/%{scl_version}/root
 %global ext_dir usr/%{_lib}/php/modules
