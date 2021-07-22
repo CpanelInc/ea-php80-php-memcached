@@ -6,12 +6,12 @@
 Name: %{scl_version}-php-memcached
 Version: 3.1.5
 Summary: php-memcached extension for %{scl_version}
-%define release_prefix 1
+%define release_prefix 2
 Release: %{release_prefix}%{?dist}.cpanel
 License: MIT
 Group: Programming/Languages
 URL: https://pecl.php.net/package/memcached
-Source: memcached-3.1.5.tgz
+Source: memcached-3.1.5.tar.gz
 Source1: memcached.ini
 
 # should be no requires for building this package
@@ -55,6 +55,9 @@ install -m 644 %{SOURCE1} %{buildroot}/%{ext_prefix}/%{conf_dir}/
 %config /%{ext_prefix}/%{conf_dir}/memcached.ini
 
 %changelog
+* Tue Jul 13 2021 Julian Brown <julian.brown@webpros.com> - 3.1.5-2
+- Rename the tarball
+
 * Tue Aug 11 2020 Julian Brown <julian.brown@cpanel.net> - 3.1.3-1
 - Created ea-php80-php-memcached
 
