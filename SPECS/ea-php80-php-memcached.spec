@@ -6,7 +6,7 @@
 Name: %{scl_version}-php-memcached
 Version: 3.1.5
 Summary: php-memcached extension for %{scl_version}
-%define release_prefix 2
+%define release_prefix 3
 Release: %{release_prefix}%{?dist}.cpanel
 License: MIT
 Group: Programming/Languages
@@ -55,6 +55,9 @@ install -m 644 %{SOURCE1} %{buildroot}/%{ext_prefix}/%{conf_dir}/
 %config /%{ext_prefix}/%{conf_dir}/memcached.ini
 
 %changelog
+* Tue Dec 28 2021 Dan Muey <dan@cpanel.net> - 3.1.5-3
+- ZC-9589: Update DISABLE_BUILD to match OBS
+
 * Tue Jul 13 2021 Julian Brown <julian.brown@webpros.com> - 3.1.5-2
 - Rename the tarball
 
