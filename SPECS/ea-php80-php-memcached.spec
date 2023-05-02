@@ -4,14 +4,14 @@
 %global conf_dir etc/php.d
 
 Name: %{scl_version}-php-memcached
-Version: 3.1.5
+Version: 3.2.0
 Summary: php-memcached extension for %{scl_version}
-%define release_prefix 3
+%define release_prefix 1
 Release: %{release_prefix}%{?dist}.cpanel
 License: MIT
 Group: Programming/Languages
 URL: https://pecl.php.net/package/memcached
-Source: memcached-3.1.5.tar.gz
+Source: v%{version}.tar.gz
 Source1: memcached.ini
 
 # should be no requires for building this package
@@ -30,7 +30,7 @@ to memcached servers.
 
 
 %prep
-%setup -n memcached-%{version}
+%setup -n php-memcached-%{version}
 
 %build
 
@@ -55,6 +55,9 @@ install -m 644 %{SOURCE1} %{buildroot}/%{ext_prefix}/%{conf_dir}/
 %config /%{ext_prefix}/%{conf_dir}/memcached.ini
 
 %changelog
+* Wed Apr 26 2023 Travis Holloway <t.holloway@cpanel.net> - 3.2.0-1
+- EA-11384: Update ea-php80-php-memcached from v3.1.5 to v3.2.0
+
 * Tue Dec 28 2021 Dan Muey <dan@cpanel.net> - 3.1.5-3
 - ZC-9589: Update DISABLE_BUILD to match OBS
 
