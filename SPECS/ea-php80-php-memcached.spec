@@ -55,7 +55,7 @@ install -m 644 %{SOURCE1} %{buildroot}/%{ext_prefix}/%{conf_dir}/
 %config /%{ext_prefix}/%{conf_dir}/memcached.ini
 
 %changelog
-* Tue May  2 2023 Julian Brown <julian.brown@cpanel.net> - 3.2.0-2
+* Tue May 02 2023 Julian Brown <julian.brown@cpanel.net> - 3.2.0-2
 - ZC-10320: Do not build on Ubuntu 22
 
 * Wed Apr 26 2023 Travis Holloway <t.holloway@cpanel.net> - 3.2.0-1
