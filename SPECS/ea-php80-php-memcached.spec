@@ -6,7 +6,7 @@
 Name: %{scl_version}-php-memcached
 Version: 3.2.0
 Summary: php-memcached extension for %{scl_version}
-%define release_prefix 1
+%define release_prefix 2
 Release: %{release_prefix}%{?dist}.cpanel
 License: MIT
 Group: Programming/Languages
@@ -55,6 +55,9 @@ install -m 644 %{SOURCE1} %{buildroot}/%{ext_prefix}/%{conf_dir}/
 %config /%{ext_prefix}/%{conf_dir}/memcached.ini
 
 %changelog
+* Tue May 02 2023 Julian Brown <julian.brown@cpanel.net> - 3.2.0-2
+- ZC-10320: Do not build on Ubuntu 22
+
 * Wed Apr 26 2023 Travis Holloway <t.holloway@cpanel.net> - 3.2.0-1
 - EA-11384: Update ea-php80-php-memcached from v3.1.5 to v3.2.0
 
