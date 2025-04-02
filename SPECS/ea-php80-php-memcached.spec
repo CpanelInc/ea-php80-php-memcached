@@ -6,7 +6,7 @@
 Name: %{scl_version}-php-memcached
 Version: 3.3.0
 Summary: php-memcached extension for %{scl_version}
-%define release_prefix 1
+%define release_prefix 2
 Release: %{release_prefix}%{?dist}.cpanel
 License: MIT
 Group: Programming/Languages
@@ -55,6 +55,9 @@ install -m 644 %{SOURCE1} %{buildroot}/%{ext_prefix}/%{conf_dir}/
 %config /%{ext_prefix}/%{conf_dir}/memcached.ini
 
 %changelog
+* Wed Apr 02 2025 Julian Brown <julian.brown@webpros.com> - 3.3.0-2
+- ZC-12156: Automate creation of *.conffiles
+
 * Tue Oct 29 2024 Cory McIntire <cory@cpanel.net> - 3.3.0-1
 - EA-12493: Update ea-php80-php-memcached from v3.2.0 to v3.3.0
 
